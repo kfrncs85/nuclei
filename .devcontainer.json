@@ -1,5 +1,48 @@
-"features": {
-  "ghcr.io/tailscale/codespace/tailscale": {
-    "version": "latest"
-  }
-} 
+{   "runArgs": ["--device=/dev/net/tun"],
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+	  "features": {
+        "ghcr.io/tailscale/codespace/tailscale": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers-extra/features/cloudflared:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "configureZshAsDefaultShell": "true",
+            "nonFreePackage": "true"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "moby": "false",
+            "dockerDefaultAddressPool": "176.25.0.0/24",
+            "disableIp6tables": "true"
+        },
+        "ghcr.io/jsburckhardt/devcontainer-features/gitleaks:1": {
+             "version": "latest"
+        },
+        "ghcr.io/schlich/devcontainer-features/grafana:1": {
+        },
+        
+        "ghcr.io/devcontainers-extra/features/tempo:1": {
+             "version": "latest"
+        },
+        "ghcr.io/m4tchl0ck/devcontainer-features/powerlevel10k:1": {
+        },
+        "ghcr.io/jckimble/devcontainer-features/ngrok:3": {
+          
+        },
+        "ghcr.io/devcontainers-extra/features/pipenv:2": {
+          
+        },
+        "ghcr.io/maks1ms/devcontainers-features/wine:0": {
+          
+        },
+        "ghcr.io/devcontainers-extra/features/prometheus:1": {
+          
+        },
+        "ghcr.io/georgofenbeck/features/thefuck-homebrew:1": {},
+        "ghcr.io/devcontainers-extra/features/wget-apt-get:1": {},
+        "ghcr.io/code-fabrik/features/lazydocker:1": {},
+        "ghcr.io/devcontainers-extra/features/youtube-dl:2": {},
+        "ghcr.io/gvatsal60/dev-container-features/uv:0": {}
+    },
+}
